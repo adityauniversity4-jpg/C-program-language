@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+using namespace std;
+
+class Student {
+private:
+    string studentName;
+    int rollNumber;
+    float marks;
+
+public:
+    string college;
+
+    void setDetails() {
+        cin.ignore(); // clear input buffer
+        cout << "Enter student name: ";
+        getline(cin, studentName);
+
+        cout << "Enter roll number: ";
+        cin >> rollNumber;
+
+        cout << "Enter marks (out of 100): ";
+        cin >> marks;
+    }
+
+    void displayDetails() {
+        cout << "\n--- Student Details ---\n";
+        cout << "Name    : " << studentName << endl;
+        cout << "Roll No : " << rollNumber << endl;
+        cout << "Marks   : " << marks << endl;
+        cout << "College : " << college << endl;
+    }
+};
+
+int main() {
+    system("color F0");  // For Windows console (optional)
+
+    cout << "Roll No: 24B11AI449" << endl;
+
+    Student s1;
+
+    cout << "Enter college name: ";
+    getline(cin, s1.college);
+
+    s1.setDetails();
+    s1.displayDetails();
+
+    // Updating college name
+    s1.college = "Aditya University";
+
+    cout << "\nUpdated College Name: " << s1.college << endl;
+
+    return 0;
+}
