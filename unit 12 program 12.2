@@ -1,0 +1,40 @@
+#include <iostream>
+#include <deque>
+using namespace std;
+
+int main() {
+    cout << "Roll no: 24B11AI499" << endl;
+
+    cout << "=== DEQUE OPERATIONS ===" << endl;
+    deque<int> dq;
+
+    dq.push_back(20);
+    dq.push_back(50);
+    dq.push_front(3);
+
+    cout << "Deque elements after insertion: ";
+    for (int x : dq)
+        cout << x << " ";
+
+    dq.pop_front();
+    cout << "\nDeque after deleting front element: ";
+    for (int x : dq)
+        cout << x << " ";
+
+    dq.pop_back();
+    cout << "\nDeque after deleting last element: ";
+    for (int x : dq)
+        cout << x << " ";
+
+    cout << "\nFront element: " << dq.front();
+    cout << "\nBack element: " << dq.back();
+
+    dq.push_front(1);
+    dq.push_back(40);
+    cout << "\nDeque after adding 1 (front) and 40 (back): ";
+    for (int x : dq)
+        cout << x << " ";
+
+    cout << endl;
+    return 0;
+}
